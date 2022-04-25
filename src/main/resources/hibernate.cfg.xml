@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Настройки подключения к БД -->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/Users</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">qwerty</property>
+        <property name="connection.pool_size">1</property>
+        <property name="default_schema">public</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <!-- SQL диалект, определяется платформой СУБД-->
+        <property name="dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
+        <!-- Включить автоматическое управление контекстом сессии -->
+        <property name="current_session_context_class">thread</property>
+        <!-- Отключение кеша второго уровня -->
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCachingRegionFactory</property>
+        <!-- Вывод в консоль SQL-запросов -->
+        <property name="show_sql">true</property>
+        <!-- Мэппинг классов-->
+        <mapping class="ru.sfedu.log4jproject.model.beans.TestEntity"/>
+    </session-factory>
+</hibernate-configuration>
