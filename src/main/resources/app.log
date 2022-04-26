@@ -1786,3 +1786,41 @@ CREATE TABLE IF NOT EXISTS Users(ID INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
 [INFO ] 2022-04-26 18:48:24.143 [main] DataProviderHibernateTest - saveTestEntitySuccess test Success
 [INFO ] 2022-04-26 18:48:25.994 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='Helen', desc='Cashier', dateCreated=2022-04-26, check=true, homeAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@6e1ae763, workAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@62d40e31}
 [INFO ] 2022-04-26 18:48:26.101 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-04-26 18:52:27.774 [main] DataProviderHibernateTest - saveTestEntitySuccess test Success
+[INFO ] 2022-04-26 18:52:29.692 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='null', desc='Cashier', dateCreated=null, check=false, homeAddress=null, workAddress=null}
+[ERROR] 2022-04-26 18:52:29.771 [main] DataProviderHibernate - saveTestEntity: not-null property references a null or transient value : ru.sfedu.log4jproject.model.entity.TestEntity.dateCreated
+[INFO ] 2022-04-26 22:30:11.986 [main] DataProviderHibernateTest - getTestEntityById test Success
+[INFO ] 2022-04-26 22:30:14.013 [main] DataProviderHibernate - getTestEntityById[1]: getting entry by id 2
+[INFO ] 2022-04-26 22:30:14.130 [main] DataProviderHibernate - saveTestEntity[2]: got entry TestEntity{id=2, name='John', desc='Best salesman', dateCreated=2022-04-26, check=true, homeAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@6c0b51da, workAddress=null}
+[INFO ] 2022-04-26 22:31:25.941 [main] DataProviderHibernateTest - getTestEntityById test Fail
+[INFO ] 2022-04-26 22:31:27.867 [main] DataProviderHibernate - getTestEntityById[1]: getting entry by id 10
+[INFO ] 2022-04-26 22:31:27.945 [main] DataProviderHibernate - saveTestEntity[2]: got entry null
+[INFO ] 2022-04-26 22:51:53.999 [main] DataProviderHibernateTest - deleteTestEntityById test Success
+[INFO ] 2022-04-26 22:51:55.906 [main] DataProviderHibernate - deleteTestEntityById[1]: deleting entry by id 3
+[ERROR] 2022-04-26 22:51:55.958 [main] DataProviderHibernate - deleteTestEntityById[3]: Unknown entity: java.lang.Long
+[INFO ] 2022-04-26 23:01:29.884 [main] DataProviderHibernateTest - deleteTestEntityById test Success
+[INFO ] 2022-04-26 23:01:31.710 [main] DataProviderHibernate - deleteTestEntityById[1]: deleting entry by id 3
+[ERROR] 2022-04-26 23:01:31.776 [main] DataProviderHibernate - deleteTestEntityById[3]: org.hibernate.PropertyValueException: not-null property references a null or transient value : ru.sfedu.log4jproject.model.entity.TestEntity.dateCreated
+[INFO ] 2022-04-26 23:03:14.968 [main] DataProviderHibernateTest - deleteTestEntityById test Success
+[INFO ] 2022-04-26 23:03:16.904 [main] DataProviderHibernate - getTestEntityById[1]: getting entry by id 3
+[INFO ] 2022-04-26 23:03:17.004 [main] DataProviderHibernate - saveTestEntity[2]: got entry TestEntity{id=3, name='Helen', desc='Cashier', dateCreated=2022-04-26, check=true, homeAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@37606fee, workAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@33d28f0a}
+[INFO ] 2022-04-26 23:03:17.006 [main] DataProviderHibernate - deleteTestEntityById[1]: deleting entry by id 3
+[INFO ] 2022-04-26 23:03:17.028 [main] DataProviderHibernate - deleteTestEntityById[2]: entry successfully deleted
+[INFO ] 2022-04-26 23:03:40.335 [main] DataProviderHibernateTest - saveTestEntity test Success
+[INFO ] 2022-04-26 23:03:42.179 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='Helen', desc='Cashier', dateCreated=2022-04-26, check=true, homeAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@11c78080, workAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@662be9f7}
+[INFO ] 2022-04-26 23:03:42.282 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-04-26 23:08:10.598 [main] DataProviderHibernateTest - deleteTestEntity test Fail
+[INFO ] 2022-04-26 23:08:12.444 [main] DataProviderHibernate - getTestEntityById[1]: getting entry by id 6
+[INFO ] 2022-04-26 23:08:12.518 [main] DataProviderHibernate - saveTestEntity[2]: got entry null
+[ERROR] 2022-04-26 23:08:12.519 [main] DataProviderHibernateTest - deleteTestEntity test Fail - Failure
+[INFO ] 2022-04-26 23:09:01.019 [main] DataProviderHibernateTest - deleteTestEntity test Fail
+[INFO ] 2022-04-26 23:09:02.905 [main] DataProviderHibernate - deleteTestEntityById[1]: deleting entry by id 0
+[INFO ] 2022-04-26 23:09:02.960 [main] DataProviderHibernate - deleteTestEntityById[2]: entry successfully deleted
+[INFO ] 2022-04-26 23:23:36.167 [main] DataProviderHibernateTest - updateTestEntity test Success
+[INFO ] 2022-04-26 23:23:38.035 [main] DataProviderHibernate - getTestEntityById[1]: getting entry by id 1
+[INFO ] 2022-04-26 23:23:38.151 [main] DataProviderHibernate - saveTestEntity[2]: got entry TestEntity{id=1, name='Vanya', desc='Average guy', dateCreated=2022-04-26, check=false, homeAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@7c453c34, workAddress=null}
+[INFO ] 2022-04-26 23:23:38.153 [main] DataProviderHibernate - updateTestEntity[1]: updating entity TestEntity{id=1, name='Anton', desc='Average guy', dateCreated=2022-04-26, check=false, homeAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@7c453c34, workAddress=null}
+[INFO ] 2022-04-26 23:23:38.174 [main] DataProviderHibernate - updateTestEntity[2]: entry successfully updated
+[INFO ] 2022-04-26 23:29:03.651 [main] DataProviderHibernateTest - updateTestEntity test Fail
+[INFO ] 2022-04-26 23:29:05.511 [main] DataProviderHibernate - updateTestEntity[1]: updating entity TestEntity{id=0, name='null', desc='null', dateCreated=null, check=false, homeAddress=null, workAddress=null}
+[ERROR] 2022-04-26 23:29:05.582 [main] DataProviderHibernate - updateTestEntity[3]: org.hibernate.PropertyValueException: not-null property references a null or transient value : ru.sfedu.log4jproject.model.entity.TestEntity.dateCreated
