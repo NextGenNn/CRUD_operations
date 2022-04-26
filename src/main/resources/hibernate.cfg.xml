@@ -11,7 +11,7 @@
         <property name="connection.password">qwerty</property>
         <property name="connection.pool_size">1</property>
         <property name="default_schema">public</property>
-        <property name="hibernate.hbm2ddl.auto">create</property>
+        <!-- <property name="hibernate.hbm2ddl.auto">create</property> -->
         <!-- SQL диалект, определяется платформой СУБД-->
         <property name="dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
         <!-- Включить автоматическое управление контекстом сессии -->

@@ -1727,3 +1727,49 @@ CREATE TABLE IF NOT EXISTS Users(ID INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
 [INFO ] 2022-04-25 22:54:24.497 [main] DataProviderHibernateTest - saveTestEntity test Success
 [INFO ] 2022-04-25 22:54:26.163 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='Joker', desc='Favorite card', dateCreated=2022-04-25, check=true}
 [ERROR] 2022-04-25 22:54:26.231 [main] DataProviderHibernate - saveTestEntity: Unknown entity: ru.sfedu.log4jproject.model.beans.TestEntity
+[INFO ] 2022-04-26 11:28:28.485 [main] DataProviderHibernateTest - saveTestEntity test Success
+[INFO ] 2022-04-26 11:28:30.935 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='Joker', desc='Favorite card', dateCreated=2022-04-26, check=true}
+[INFO ] 2022-04-26 11:28:31.007 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-04-26 14:55:41.459 [main] DataProviderHibernateTest - getEntriesCount test Success
+[INFO ] 2022-04-26 14:55:43.434 [main] DataProviderHibernate - getEntriesCount[1]: getting entries count
+[ERROR] 2022-04-26 14:55:43.537 [main] DataProviderHibernate - getEntriesCount[ERR]: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+[ERROR] 2022-04-26 14:55:43.538 [main] DataProviderHibernateTest - getEntriesCount test Success - Failure
+[INFO ] 2022-04-26 14:57:29.191 [main] DataProviderHibernateTest - getEntriesCount test Success
+[INFO ] 2022-04-26 14:57:31.180 [main] DataProviderHibernate - getEntriesCount[1]: getting entries count
+[INFO ] 2022-04-26 14:57:31.278 [main] DataProviderHibernate - getEntriesCount[2]: got result 0
+[INFO ] 2022-04-26 14:58:20.914 [main] DataProviderHibernateTest - saveTestEntitySuccess test Success
+[INFO ] 2022-04-26 14:58:22.930 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='Joker', desc='Favorite card', dateCreated=2022-04-26, check=true}
+[INFO ] 2022-04-26 14:58:23.006 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-04-26 15:00:51.610 [main] DataProviderHibernateTest - saveTestEntitySuccess test Success
+[INFO ] 2022-04-26 15:00:53.685 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='Joker', desc='Favorite card', dateCreated=2022-04-26, check=true}
+[INFO ] 2022-04-26 15:00:53.762 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-04-26 15:07:46.190 [main] DataProviderHibernateTest - saveTestEntitySuccess test Success
+[INFO ] 2022-04-26 15:07:48.361 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='Joker', desc='Favorite card', dateCreated=2022-04-26, check=true}
+[INFO ] 2022-04-26 15:07:48.436 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-04-26 15:08:50.124 [main] DataProviderHibernateTest - saveTestEntitySuccess test Success
+[INFO ] 2022-04-26 15:08:52.393 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='Joker', desc='Favorite card', dateCreated=2022-04-26, check=true}
+[INFO ] 2022-04-26 15:08:52.467 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-04-26 15:10:15.416 [main] DataProviderHibernateTest - saveTestEntitySuccess test Success
+[INFO ] 2022-04-26 15:10:17.285 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='Joker', desc='Favorite card', dateCreated=2022-04-26, check=true}
+[INFO ] 2022-04-26 15:10:17.356 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-04-26 15:11:16.561 [main] DataProviderHibernateTest - saveTestEntitySuccess test Success
+[INFO ] 2022-04-26 15:11:18.579 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='Joker', desc='Favorite card', dateCreated=2022-04-26, check=true}
+[INFO ] 2022-04-26 15:11:18.671 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-04-26 15:19:21.256 [main] DataProviderHibernateTest - saveTestEntitySuccess test Success
+[INFO ] 2022-04-26 15:19:23.109 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='Joker', desc='Favorite card', dateCreated=2022-04-26, check=true}
+[INFO ] 2022-04-26 15:19:23.188 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-04-26 15:21:13.600 [main] DataProviderHibernateTest - saveTestEntitySuccess test Success
+[INFO ] 2022-04-26 15:21:15.505 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='Joker', desc='Favorite card', dateCreated=2022-04-26, check=true}
+[INFO ] 2022-04-26 15:21:15.602 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-04-26 15:25:02.675 [main] DataProviderHibernateTest - saveTestEntitySuccess test Success
+[INFO ] 2022-04-26 15:25:04.557 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='Joker', desc='Favorite card', dateCreated=2022-04-26, check=true}
+[INFO ] 2022-04-26 15:25:04.637 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-04-26 15:29:54.351 [main] DataProviderHibernateTest - saveTestEntitySuccess test Success
+[INFO ] 2022-04-26 15:29:56.302 [main] DataProviderHibernate - saveTestEntity[1]: adding entity ru.sfedu.log4jproject.model.beans.TestEntity@7302ff13
+[INFO ] 2022-04-26 15:29:56.385 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-04-26 15:36:52.345 [main] DataProviderHibernateTest - saveTestEntitySuccess test Success
+[INFO ] 2022-04-26 15:36:54.143 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='Joker', desc='Favorite card', dateCreated=2022-04-26, check=true}
+[INFO ] 2022-04-26 15:36:54.228 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-04-26 15:40:38.984 [main] DataProviderHibernateTest - saveTestEntitySuccess test Success
+[INFO ] 2022-04-26 15:40:40.777 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='Joker', desc='Favorite card', dateCreated=2022-04-26, check=true}
+[INFO ] 2022-04-26 15:40:40.872 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
