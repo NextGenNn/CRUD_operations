@@ -1,9 +1,8 @@
-package ru.sfedu.log4jproject.model.beans;
+package ru.sfedu.log4jproject.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @NoArgsConstructor

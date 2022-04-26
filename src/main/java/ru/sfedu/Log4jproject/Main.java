@@ -9,7 +9,7 @@ import ru.sfedu.log4jproject.api.DataProviderH2;
 import ru.sfedu.log4jproject.api.DataProviderXml;
 import ru.sfedu.log4jproject.api.IDataProvider;
 import ru.sfedu.log4jproject.model.Result;
-import ru.sfedu.log4jproject.model.beans.User;
+import ru.sfedu.log4jproject.model.entity.User;
 import ru.sfedu.log4jproject.utils.ConfigurationUtil;
 import ru.sfedu.log4jproject.utils.HibernateUtil;
 

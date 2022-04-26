@@ -4,14 +4,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ru.sfedu.log4jproject.model.CodeType;
 import ru.sfedu.log4jproject.model.Result;
-import ru.sfedu.log4jproject.model.beans.User;
+import ru.sfedu.log4jproject.model.entity.User;
 import ru.sfedu.log4jproject.utils.ConfigurationUtil;
 import ru.sfedu.log4jproject.Constants;
 import ru.sfedu.log4jproject.utils.IdGenerator;
 import ru.sfedu.log4jproject.utils.Validator;
 
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
 
 public class DataProviderH2 implements IDataProvider {

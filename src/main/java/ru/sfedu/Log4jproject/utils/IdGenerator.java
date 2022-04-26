@@ -6,13 +6,12 @@ import org.apache.logging.log4j.Logger;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 import ru.sfedu.log4jproject.Constants;
-import ru.sfedu.log4jproject.model.beans.User;
+import ru.sfedu.log4jproject.model.entity.User;
 import ru.sfedu.log4jproject.model.Wrapper;
 
 import java.io.File;
 import java.io.IOException;
 import java.sql.*;
-import java.text.ParseException;
 import java.util.List;
 
 public class IdGenerator {

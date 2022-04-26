@@ -10,7 +10,7 @@ import com.opencsv.exceptions.CsvDataTypeMismatchException;
 import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import ru.sfedu.log4jproject.model.beans.User;
+import ru.sfedu.log4jproject.model.entity.User;
 
 import java.io.File;
 import java.io.FileReader;

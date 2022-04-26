@@ -3,7 +3,7 @@ package ru.sfedu.log4jproject.api;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
-import ru.sfedu.log4jproject.model.beans.User;
+import ru.sfedu.log4jproject.model.entity.User;
 
 import static org.junit.jupiter.api.Assertions.*;
 

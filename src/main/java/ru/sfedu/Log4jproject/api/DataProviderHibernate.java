@@ -7,7 +7,7 @@ import org.hibernate.SessionFactory;
 import ru.sfedu.log4jproject.Constants;
 import ru.sfedu.log4jproject.model.CodeType;
 import ru.sfedu.log4jproject.model.Result;
-import ru.sfedu.log4jproject.model.beans.TestEntity;
+import ru.sfedu.log4jproject.model.entity.TestEntity;
 import ru.sfedu.log4jproject.utils.HibernateUtil;
 import java.util.List;
 
@@ -47,7 +47,7 @@ public class DataProviderHibernate {
         try {
             log.info("getEntriesCount[1]: getting entries count");
             Session session = sessionFactory.openSession();
-            List list =  session.createSQLQuery(Constants.POST_COUNT).list();
+            List list =  session.createSQLQuery(Constants.POST_COUNT_TEST).list();
             log.info("getEntriesCount[2]: got result {}", list.get(0));
             session.close();
             return list.get(0).toString();
@@ -75,7 +75,9 @@ public class DataProviderHibernate {
         try{
             log.info("saveTestEntity[1]: adding entity {}", entity);
             Session session = sessionFactory.openSession();
+            session.beginTransaction();
             session.save(entity);
+            session.getTransaction().commit();
             session.close();
             log.info("saveTestEntity[2]: entity is successfully saved");
             return new Result<TestEntity>("Success", null, CodeType.SUCCESS);

@@ -8,9 +8,7 @@ import ru.sfedu.log4jproject.model.ActionType;
 import ru.sfedu.log4jproject.model.CodeType;
 import ru.sfedu.log4jproject.model.RepositoryType;
 import ru.sfedu.log4jproject.model.Result;
-import ru.sfedu.log4jproject.model.beans.User;
-
-import java.util.Properties;
+import ru.sfedu.log4jproject.model.entity.User;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;

@@ -5,7 +5,7 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
-import ru.sfedu.log4jproject.model.beans.User;
+import ru.sfedu.log4jproject.model.entity.TestEntity;
 
 import java.io.File;
 
@@ -30,7 +30,7 @@ public class HibernateUtil {
 
             MetadataSources metadataSources =
                     new MetadataSources(serviceRegistry);
-            metadataSources.addAnnotatedClass(User.class);// Аннотированная сущность
+            metadataSources.addAnnotatedClass(TestEntity.class);// Аннотированная сущность
             //metadataSources.addResource("named-queries.hbm.xml");// Именованные запросы
             sessionFactory = metadataSources.buildMetadata().buildSessionFactory();
         }

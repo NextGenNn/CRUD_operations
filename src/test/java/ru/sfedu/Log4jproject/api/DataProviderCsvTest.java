@@ -3,7 +3,7 @@ package ru.sfedu.log4jproject.api;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import ru.sfedu.log4jproject.model.Result;
-import ru.sfedu.log4jproject.model.beans.User;
+import ru.sfedu.log4jproject.model.entity.User;
 
 import static org.junit.jupiter.api.Assertions.*;
 @Slf4j

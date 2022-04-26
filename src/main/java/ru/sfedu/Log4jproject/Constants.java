@@ -15,7 +15,7 @@ public class Constants {
 
     public final static String POST_BDSIZE = "SELECT pg_size_pretty(pg_database_size('Users'))";
     public final static String POST_BDVERSION = "SELECT VERSION()";
-    public final static String POST_COUNT = "SELECT count(*) FROM ".concat(TABLE_NAME);
+    public final static String POST_COUNT_TEST = "SELECT count(*) FROM test";
     public final static String POST_TABLES = """
             SELECT table_name FROM information_schema.tables
             WHERE table_schema NOT IN ('information_schema', 'pg_catalog')

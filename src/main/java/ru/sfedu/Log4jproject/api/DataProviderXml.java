@@ -6,7 +6,7 @@ import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 import ru.sfedu.log4jproject.model.CodeType;
 import ru.sfedu.log4jproject.model.Result;
-import ru.sfedu.log4jproject.model.beans.User;
+import ru.sfedu.log4jproject.model.entity.User;
 import ru.sfedu.log4jproject.model.Wrapper;
 import ru.sfedu.log4jproject.utils.IdGenerator;
 import ru.sfedu.log4jproject.utils.Validator;

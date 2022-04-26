@@ -2,7 +2,7 @@ package ru.sfedu.log4jproject.model;
 
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
-import ru.sfedu.log4jproject.model.beans.User;
+import ru.sfedu.log4jproject.model.entity.User;
 
 import java.util.List;
 import java.util.Objects;

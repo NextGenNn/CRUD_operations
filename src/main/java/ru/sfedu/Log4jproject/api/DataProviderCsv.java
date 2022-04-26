@@ -2,12 +2,11 @@ package ru.sfedu.log4jproject.api;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import ru.sfedu.log4jproject.Constants;
 import ru.sfedu.log4jproject.model.ActionType;
 import ru.sfedu.log4jproject.model.CodeType;
 import ru.sfedu.log4jproject.model.RepositoryType;
 import ru.sfedu.log4jproject.model.Result;
-import ru.sfedu.log4jproject.model.beans.User;
+import ru.sfedu.log4jproject.model.entity.User;
 import ru.sfedu.log4jproject.utils.CsvUtil;
 import ru.sfedu.log4jproject.utils.IdGenerator;
 import ru.sfedu.log4jproject.utils.StringUtil;
