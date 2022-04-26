@@ -1773,3 +1773,16 @@ CREATE TABLE IF NOT EXISTS Users(ID INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
 [INFO ] 2022-04-26 15:40:38.984 [main] DataProviderHibernateTest - saveTestEntitySuccess test Success
 [INFO ] 2022-04-26 15:40:40.777 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='Joker', desc='Favorite card', dateCreated=2022-04-26, check=true}
 [INFO ] 2022-04-26 15:40:40.872 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-04-26 15:56:22.574 [main] DataProviderHibernateTest - saveTestEntitySuccess test Success
+[INFO ] 2022-04-26 18:41:55.707 [main] DataProviderHibernateTest - saveTestEntitySuccess test Success
+[INFO ] 2022-04-26 18:41:57.921 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='Joker', desc='Favorite card', dateCreated=2022-04-26, check=true, homeAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@3dbd7107, workAddress=null}
+[INFO ] 2022-04-26 18:41:58.025 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-04-26 18:43:28.277 [main] DataProviderHibernateTest - saveTestEntitySuccess test Success
+[INFO ] 2022-04-26 18:43:30.394 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='Vanya', desc='Average guy', dateCreated=2022-04-26, check=false, homeAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@1b24ea2a, workAddress=null}
+[INFO ] 2022-04-26 18:43:30.505 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-04-26 18:45:28.416 [main] DataProviderHibernateTest - saveTestEntitySuccess test Success
+[INFO ] 2022-04-26 18:45:30.276 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='John', desc='Best salesman', dateCreated=2022-04-26, check=true, homeAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@662be9f7, workAddress=null}
+[INFO ] 2022-04-26 18:45:30.373 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-04-26 18:48:24.143 [main] DataProviderHibernateTest - saveTestEntitySuccess test Success
+[INFO ] 2022-04-26 18:48:25.994 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='Helen', desc='Cashier', dateCreated=2022-04-26, check=true, homeAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@6e1ae763, workAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@62d40e31}
+[INFO ] 2022-04-26 18:48:26.101 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
