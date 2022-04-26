@@ -9,6 +9,8 @@ import ru.sfedu.log4jproject.model.CodeType;
 import ru.sfedu.log4jproject.model.Result;
 import ru.sfedu.log4jproject.model.entity.TestEntity;
 import ru.sfedu.log4jproject.utils.HibernateUtil;
+
+import java.sql.ResultSet;
 import java.util.List;
 
 public class DataProviderHibernate {
@@ -72,7 +74,7 @@ public class DataProviderHibernate {
     }
 
     public Result<TestEntity> saveTestEntity(TestEntity entity){
-        try{
+        try{ //Как правильнее ставить try-catch?
             log.info("saveTestEntity[1]: adding entity {}", entity);
             Session session = sessionFactory.openSession();
             session.beginTransaction();
@@ -82,7 +84,56 @@ public class DataProviderHibernate {
             log.info("saveTestEntity[2]: entity is successfully saved");
             return new Result<TestEntity>("Success", null, CodeType.SUCCESS);
         } catch (Exception ex){
-            log.error("saveTestEntity: {}", ex.getMessage());
+            log.error("saveTestEntity[3]: {}", ex.getMessage());
+            return new Result<TestEntity>(ex.getMessage(), null, CodeType.ERROR);
+        }
+    }
+
+    public Result<TestEntity> getTestEntityById(long id){
+        log.info("getTestEntityById[1]: getting entry by id {}", id);
+        Session session = sessionFactory.openSession();
+            try{ //Или вот так?
+                session.beginTransaction();
+                TestEntity entityToReturn = session.get(TestEntity.class, id);
+                session.getTransaction().commit();
+                session.close();
+                log.info("saveTestEntity[2]: got entry {}", entityToReturn);
+                return new Result<TestEntity>("Success", entityToReturn, CodeType.SUCCESS);
+            } catch (Exception ex){
+                session.close();
+                log.error("getTestEntityById[3]: {}", ex.getMessage());
+                return new Result<TestEntity>(ex.getMessage(), null, CodeType.ERROR);
+            }
+    }
+
+    public Result<TestEntity> updateTestEntity(TestEntity entityToUpdate){
+        log.info("updateTestEntity[1]: updating entity {}", entityToUpdate);
+        Session session = sessionFactory.openSession();
+        try{
+            session.beginTransaction();
+            session.update(entityToUpdate);
+            session.getTransaction().commit();
+            session.close();
+            log.info("updateTestEntity[2]: entry successfully updated");
+            return new Result<TestEntity>("Success", null, CodeType.SUCCESS);
+        } catch(Exception ex) {
+            log.error("updateTestEntity[3]: {}", ex.getMessage());
+            return new Result<TestEntity>(ex.getMessage(), null, CodeType.ERROR);
+        }
+    }
+
+    public Result<TestEntity> deleteTestEntity(TestEntity entityToDelete){
+        log.info("deleteTestEntityById[1]: deleting entry by id {}", entityToDelete.getId());
+        Session session = sessionFactory.openSession();
+        try{
+            session.beginTransaction();
+            session.delete(entityToDelete);
+            session.getTransaction().commit();
+            session.close();
+            log.info("deleteTestEntityById[2]: entry successfully deleted");
+            return new Result<TestEntity>("Success", null, CodeType.SUCCESS);
+        } catch(Exception ex){
+            log.error("deleteTestEntityById[3]: {}", ex.getMessage());
             return new Result<TestEntity>(ex.getMessage(), null, CodeType.ERROR);
         }
     }

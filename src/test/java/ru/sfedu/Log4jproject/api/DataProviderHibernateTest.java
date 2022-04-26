@@ -63,7 +63,7 @@ class DataProviderHibernateTest {
     @Test
     void saveTestEntitySuccess(){
         try{
-            log.info("saveTestEntitySuccess test Success");
+            log.info("saveTestEntity test Success");
             DataProviderHibernate dataProvider = new DataProviderHibernate();
             TestEntity test = new TestEntity();
             test.setCheck(true);
@@ -74,7 +74,96 @@ class DataProviderHibernateTest {
             test.setWorkAddress(new TestEntity.Address("Detroit", "6th Street"));
             dataProvider.saveTestEntity(test);
         } catch (Exception ex){
-            log.error("saveTestEntitySuccess test Success - Failure");
+            log.error("saveTestEntity test Success - Failure");
+            fail(ex.getMessage());
+        }
+    }
+
+    @Test
+    void saveTestEntityFail(){
+        try{
+            log.info("saveTestEntity test Fail");
+            DataProviderHibernate dataProvider = new DataProviderHibernate();
+            TestEntity test = new TestEntity();
+            dataProvider.saveTestEntity(test);
+        } catch (Exception ex){
+            log.error("saveTestEntity test Fail - Failure");
+            fail(ex.getMessage());
+        }
+    }
+
+    @Test
+    void getTestEntityByIdSuccess(){
+        log.info("getTestEntityById test Success");
+        try{
+            DataProviderHibernate dataProvider = new DataProviderHibernate();
+            dataProvider.getTestEntityById(2);
+        } catch(Exception ex){
+            log.error("getTestEntityById test Success - Failure");
+            fail(ex.getMessage());
+        }
+    }
+
+    @Test
+    void getTestEntityByIdFail(){
+        log.info("getTestEntityById test Fail");
+        try{
+            DataProviderHibernate dataProvider = new DataProviderHibernate();
+            dataProvider.getTestEntityById(10);
+        } catch(Exception ex){
+            log.error("getTestEntityById test Fail - Failure");
+            fail(ex.getMessage());
+        }
+    }
+
+    @Test
+    void updateTestEntitySuccess(){
+        log.info("updateTestEntity test Success");
+        try{
+            DataProviderHibernate dataProvider = new DataProviderHibernate();
+            TestEntity entity = dataProvider.getTestEntityById(1).getEntity();
+            entity.setName("Anton");
+            dataProvider.updateTestEntity(entity);
+        } catch(Exception ex){
+            log.error("updateTestEntity test Success - Failure");
+            fail(ex.getMessage());
+        }
+    }
+
+    @Test
+    void updateTestEntityFail(){
+        log.info("updateTestEntity test Fail");
+        try{
+            DataProviderHibernate dataProvider = new DataProviderHibernate();
+            TestEntity dummy = new TestEntity();
+            dataProvider.updateTestEntity(dummy);
+        } catch(Exception ex){
+            log.error("updateTestEntity test Fail - Failure");
+            fail(ex.getMessage());
+        }
+    }
+
+    @Test
+    void deleteTestEntitySuccess(){
+        log.info("deleteTestEntity test Success");
+        try{
+            DataProviderHibernate dataProvider = new DataProviderHibernate();
+            dataProvider.deleteTestEntity(dataProvider.getTestEntityById(3).getEntity());
+        } catch(Exception ex){
+            log.error("deleteTestEntity test Success - Failure");
+            fail(ex.getMessage());
+        }
+    }
+
+    @Test
+    void deleteTestEntityFail(){
+        log.info("deleteTestEntity test Fail");
+        try{
+            DataProviderHibernate dataProvider = new DataProviderHibernate();
+            TestEntity dummy = new TestEntity();
+            dataProvider.deleteTestEntity(dummy);
+        } catch(Exception ex){
+            log.error("deleteTestEntity test Fail - Failure");
             fail(ex.getMessage());
         }
     }
