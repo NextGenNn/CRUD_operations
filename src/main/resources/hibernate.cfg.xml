@@ -21,6 +21,6 @@
         <!-- Вывод в консоль SQL-запросов -->
         <property name="show_sql">true</property>
         <!-- Мэппинг классов-->
-        <mapping class="ru.sfedu.log4jproject.model.beans.TestEntity"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.TestEntity"/>
     </session-factory>
 </hibernate-configuration>
