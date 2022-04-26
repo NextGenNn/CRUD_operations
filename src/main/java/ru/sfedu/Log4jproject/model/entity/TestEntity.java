@@ -1,5 +1,6 @@
 package ru.sfedu.log4jproject.model.entity;
 
+import com.sun.istack.NotNull;
 import lombok.*;
 
 import javax.persistence.*;
@@ -30,6 +31,32 @@ public class TestEntity implements Serializable {
     @Column(name = "checked", nullable = false)
     private boolean check;
 
+    @Embeddable
+    @AllArgsConstructor
+    @NoArgsConstructor
+    @Getter
+    @Setter
+    public static class Address implements Serializable {
+        @NotNull
+        private String city;
+        @NotNull
+        private String street;
+    }
+
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name = "city", column = @Column(name = "home_city")),
+            @AttributeOverride(name = "street", column = @Column(name = "home_street"))
+    })
+    private Address homeAddress;
+
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name = "city", column = @Column(name = "work_city")),
+            @AttributeOverride(name = "street", column = @Column(name = "work_street"))
+    })
+    private Address workAddress;
+
     @Override
     public String toString() {
         return "TestEntity{" +
@@ -38,6 +65,8 @@ public class TestEntity implements Serializable {
                 ", desc='" + desc + '\'' +
                 ", dateCreated=" + dateCreated +
                 ", check=" + check +
+                ", homeAddress=" + homeAddress +
+                ", workAddress=" + workAddress +
                 '}';
     }
 }

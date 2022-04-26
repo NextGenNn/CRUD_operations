@@ -65,12 +65,13 @@ class DataProviderHibernateTest {
         try{
             log.info("saveTestEntitySuccess test Success");
             DataProviderHibernate dataProvider = new DataProviderHibernate();
-            //TestEntity test = new TestEntity(0, "Joker", "Favorite card", LocalDate.now(), true);
             TestEntity test = new TestEntity();
             test.setCheck(true);
-            test.setDesc("Favorite card");
-            test.setName("Joker");
+            test.setDesc("Cashier");
+            test.setName("Helen");
             test.setDateCreated(LocalDate.now());
+            test.setHomeAddress(new TestEntity.Address("Detroit", "Lincoln Avenue"));
+            test.setWorkAddress(new TestEntity.Address("Detroit", "6th Street"));
             dataProvider.saveTestEntity(test);
         } catch (Exception ex){
             log.error("saveTestEntitySuccess test Success - Failure");
