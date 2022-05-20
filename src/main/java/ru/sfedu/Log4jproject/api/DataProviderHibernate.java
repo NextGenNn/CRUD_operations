@@ -8,9 +8,9 @@ import ru.sfedu.log4jproject.Constants;
 import ru.sfedu.log4jproject.model.CodeType;
 import ru.sfedu.log4jproject.model.Result;
 import ru.sfedu.log4jproject.model.entity.TestEntity;
+import ru.sfedu.log4jproject.model.entity.mapped_superclass.CommMSDevice;
 import ru.sfedu.log4jproject.utils.HibernateUtil;
 
-import java.sql.ResultSet;
 import java.util.List;
 
 public class DataProviderHibernate {
@@ -97,7 +97,7 @@ public class DataProviderHibernate {
                 TestEntity entityToReturn = session.get(TestEntity.class, id);
                 session.getTransaction().commit();
                 session.close();
-                log.info("saveTestEntity[2]: got entry {}", entityToReturn);
+                log.info("getTestEntity[2]: got entry {}", entityToReturn);
                 return new Result<TestEntity>("Success", entityToReturn, CodeType.SUCCESS);
             } catch (Exception ex){
                 session.close();
@@ -123,18 +123,90 @@ public class DataProviderHibernate {
     }
 
     public Result<TestEntity> deleteTestEntity(TestEntity entityToDelete){
-        log.info("deleteTestEntityById[1]: deleting entry by id {}", entityToDelete.getId());
+        log.info("deleteTestEntity[1]: deleting entry by id {}", entityToDelete.getId());
         Session session = sessionFactory.openSession();
         try{
             session.beginTransaction();
             session.delete(entityToDelete);
             session.getTransaction().commit();
             session.close();
-            log.info("deleteTestEntityById[2]: entry successfully deleted");
+            log.info("deleteTestEntity[2]: entry successfully deleted");
             return new Result<TestEntity>("Success", null, CodeType.SUCCESS);
         } catch(Exception ex){
-            log.error("deleteTestEntityById[3]: {}", ex.getMessage());
+            log.error("deleteTestEntity[3]: {}", ex.getMessage());
             return new Result<TestEntity>(ex.getMessage(), null, CodeType.ERROR);
+        }
+    }
+
+    public Result<Object> save(Object entity){
+        log.info("save[1]: saving entity {}", entity);
+        Session session = sessionFactory.openSession();
+        try{
+            session.beginTransaction();
+            session.save(entity);
+            session.getTransaction().commit();
+            session.close();
+            log.info("saveTestEntity[2]: entity is successfully saved");
+            return new Result<Object>("Success", null, CodeType.SUCCESS);
+        } catch (Exception ex){
+            session.getTransaction().rollback();
+            session.close();
+            log.error("saveTestEntity[3]: {}", ex.getMessage());
+            return new Result<Object>(ex.getMessage(), null, CodeType.ERROR);
+        }
+    }
+
+    public <T> Result<Object> get(Class<T> clazz, long id){
+        log.info("get[1]: getting entry by id {}", id);
+        Session session = sessionFactory.openSession();
+        try{
+            session.beginTransaction();
+            Object entityToReturn = session.get(clazz, id);
+            session.getTransaction().commit();
+            session.close();
+            log.info("get[2]: got entry {}", entityToReturn);
+            return new Result<Object>("Success", entityToReturn, CodeType.SUCCESS);
+        } catch (Exception ex){
+            session.getTransaction().rollback();
+            session.close();
+            log.error("get[3]: {}", ex.getMessage());
+            return new Result<Object>(ex.getMessage(), null, CodeType.ERROR);
+        }
+    }
+
+    public Result<Object> update(Object entityToUpdate){
+        log.info("update[1]: updating entity {}", entityToUpdate);
+        Session session = sessionFactory.openSession();
+        try{
+            session.beginTransaction();
+            session.update(entityToUpdate);
+            session.getTransaction().commit();
+            session.close();
+            log.info("update[2]: entry successfully updated");
+            return new Result<Object>("Success", null, CodeType.SUCCESS);
+        } catch(Exception ex) {
+            session.getTransaction().rollback();
+            session.close();
+            log.error("update[3]: {}", ex.getMessage());
+            return new Result<Object>(ex.getMessage(), null, CodeType.ERROR);
+        }
+    }
+
+    public Result<Object> delete(Object entityToDelete){
+        log.info("delete[1]: deleting entry {}", entityToDelete);
+        Session session = sessionFactory.openSession();
+        try{
+            session.beginTransaction();
+            session.delete(entityToDelete);
+            session.getTransaction().commit();
+            session.close();
+            log.info("delete[2]: entry successfully deleted");
+            return new Result<Object>("Success", null, CodeType.SUCCESS);
+        } catch(Exception ex){
+            session.getTransaction().rollback();
+            session.close();
+            log.error("delete[3]: {}", ex.getMessage());
+            return new Result<Object>(ex.getMessage(), null, CodeType.ERROR);
         }
     }
 }

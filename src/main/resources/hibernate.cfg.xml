@@ -11,7 +11,7 @@
         <property name="connection.password">qwerty</property>
         <property name="connection.pool_size">1</property>
         <property name="default_schema">public</property>
-        <!-- <property name="hibernate.hbm2ddl.auto">create</property> -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
         <!-- SQL диалект, определяется платформой СУБД-->
         <property name="dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
         <!-- Включить автоматическое управление контекстом сессии -->
@@ -22,5 +22,17 @@
         <property name="show_sql">true</property>
         <!-- Мэппинг классов-->
         <mapping class="ru.sfedu.log4jproject.model.entity.TestEntity"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.joined_table.JTDevice"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.joined_table.CommJTDevice"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.joined_table.MediaJTDevice"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.mapped_superclass.MSDevice"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.mapped_superclass.CommMSDevice"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.mapped_superclass.MediaMSDevice"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.single_table.STDevice"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.single_table.CommSTDevice"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.single_table.MediaSTDevice"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.table_per_class.TPCDevice"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.table_per_class.CommTPCDevice"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.table_per_class.MediaTPCDevice"/>
     </session-factory>
 </hibernate-configuration>

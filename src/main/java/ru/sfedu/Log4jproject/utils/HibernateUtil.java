@@ -6,6 +6,18 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import ru.sfedu.log4jproject.model.entity.TestEntity;
+import ru.sfedu.log4jproject.model.entity.joined_table.CommJTDevice;
+import ru.sfedu.log4jproject.model.entity.joined_table.JTDevice;
+import ru.sfedu.log4jproject.model.entity.joined_table.MediaJTDevice;
+import ru.sfedu.log4jproject.model.entity.mapped_superclass.CommMSDevice;
+import ru.sfedu.log4jproject.model.entity.mapped_superclass.MSDevice;
+import ru.sfedu.log4jproject.model.entity.mapped_superclass.MediaMSDevice;
+import ru.sfedu.log4jproject.model.entity.single_table.CommSTDevice;
+import ru.sfedu.log4jproject.model.entity.single_table.MediaSTDevice;
+import ru.sfedu.log4jproject.model.entity.single_table.STDevice;
+import ru.sfedu.log4jproject.model.entity.table_per_class.CommTPCDevice;
+import ru.sfedu.log4jproject.model.entity.table_per_class.MediaTPCDevice;
+import ru.sfedu.log4jproject.model.entity.table_per_class.TPCDevice;
 
 import java.io.File;
 
@@ -31,6 +43,19 @@ public class HibernateUtil {
             MetadataSources metadataSources =
                     new MetadataSources(serviceRegistry);
             metadataSources.addAnnotatedClass(TestEntity.class);// Аннотированная сущность
+            metadataSources.addAnnotatedClass(STDevice.class);
+            metadataSources.addAnnotatedClass(CommSTDevice.class);
+            metadataSources.addAnnotatedClass(MediaSTDevice.class);
+            metadataSources.addAnnotatedClass(CommMSDevice.class);
+            metadataSources.addAnnotatedClass(MediaMSDevice.class);
+            metadataSources.addAnnotatedClass(MSDevice.class);
+            metadataSources.addAnnotatedClass(CommJTDevice.class);
+            metadataSources.addAnnotatedClass(JTDevice.class);
+            metadataSources.addAnnotatedClass(MediaJTDevice.class);
+            metadataSources.addAnnotatedClass(TPCDevice.class);
+            metadataSources.addAnnotatedClass(CommTPCDevice.class);
+            metadataSources.addAnnotatedClass(MediaTPCDevice.class);
+
             //metadataSources.addResource("named-queries.hbm.xml");// Именованные запросы
             sessionFactory = metadataSources.buildMetadata().buildSessionFactory();
         }

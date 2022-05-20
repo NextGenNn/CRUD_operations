@@ -1824,3 +1824,129 @@ CREATE TABLE IF NOT EXISTS Users(ID INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
 [INFO ] 2022-04-26 23:29:03.651 [main] DataProviderHibernateTest - updateTestEntity test Fail
 [INFO ] 2022-04-26 23:29:05.511 [main] DataProviderHibernate - updateTestEntity[1]: updating entity TestEntity{id=0, name='null', desc='null', dateCreated=null, check=false, homeAddress=null, workAddress=null}
 [ERROR] 2022-04-26 23:29:05.582 [main] DataProviderHibernate - updateTestEntity[3]: org.hibernate.PropertyValueException: not-null property references a null or transient value : ru.sfedu.log4jproject.model.entity.TestEntity.dateCreated
+[INFO ] 2022-05-11 08:19:40.279 [main] DataProviderHibernateTest - deleteTestEntity test Success
+[INFO ] 2022-05-11 08:19:42.360 [main] DataProviderHibernate - getTestEntityById[1]: getting entry by id 5
+[INFO ] 2022-05-11 08:19:42.473 [main] DataProviderHibernate - saveTestEntity[2]: got entry TestEntity{id=5, name='Helen', desc='Cashier', dateCreated=2022-04-26, check=true, homeAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@20349058, workAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@6cbb7a7d}
+[INFO ] 2022-05-11 08:19:42.475 [main] DataProviderHibernate - deleteTestEntityById[1]: deleting entry by id 5
+[INFO ] 2022-05-11 08:19:42.490 [main] DataProviderHibernate - deleteTestEntityById[2]: entry successfully deleted
+[INFO ] 2022-05-11 08:51:18.734 [main] DataProviderHibernateTest - saveTestEntity test Success
+[INFO ] 2022-05-11 08:51:20.606 [main] DataProviderHibernate - saveTestEntity[1]: adding entity TestEntity{id=0, name='Helen', desc='Cashier', dateCreated=2022-05-11, check=true, homeAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@6282b9f5, workAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@5b5f9003}
+[INFO ] 2022-05-11 08:51:20.854 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-11 08:52:01.112 [main] DataProviderHibernateTest - getTestEntityById test Success
+[INFO ] 2022-05-11 08:52:02.958 [main] DataProviderHibernate - getTestEntityById[1]: getting entry by id 6
+[INFO ] 2022-05-11 08:52:03.066 [main] DataProviderHibernate - saveTestEntity[2]: got entry TestEntity{id=6, name='Helen', desc='Cashier', dateCreated=2022-05-11, check=true, homeAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@cdb3c85, workAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@37606fee}
+[INFO ] 2022-05-11 08:52:29.086 [main] DataProviderHibernateTest - updateTestEntity test Success
+[INFO ] 2022-05-11 08:52:30.984 [main] DataProviderHibernate - getTestEntityById[1]: getting entry by id 1
+[INFO ] 2022-05-11 08:52:31.089 [main] DataProviderHibernate - saveTestEntity[2]: got entry TestEntity{id=1, name='Anton', desc='Average guy', dateCreated=2022-04-26, check=false, homeAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@216372b7, workAddress=null}
+[INFO ] 2022-05-11 08:52:31.091 [main] DataProviderHibernate - updateTestEntity[1]: updating entity TestEntity{id=1, name='Vasily', desc='Average guy', dateCreated=2022-04-26, check=false, homeAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@216372b7, workAddress=null}
+[INFO ] 2022-05-11 08:52:31.175 [main] DataProviderHibernate - updateTestEntity[2]: entry successfully updated
+[INFO ] 2022-05-11 08:52:53.950 [main] DataProviderHibernateTest - deleteTestEntity test Success
+[INFO ] 2022-05-11 08:52:55.737 [main] DataProviderHibernate - getTestEntityById[1]: getting entry by id 6
+[INFO ] 2022-05-11 08:52:55.842 [main] DataProviderHibernate - saveTestEntity[2]: got entry TestEntity{id=6, name='Helen', desc='Cashier', dateCreated=2022-05-11, check=true, homeAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@2f2e4bde, workAddress=ru.sfedu.log4jproject.model.entity.TestEntity$Address@6222391a}
+[INFO ] 2022-05-11 08:52:55.844 [main] DataProviderHibernate - deleteTestEntityById[1]: deleting entry by id 6
+[INFO ] 2022-05-11 08:52:55.936 [main] DataProviderHibernate - deleteTestEntityById[2]: entry successfully deleted
+[INFO ] 2022-05-11 16:05:09.466 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-11 16:06:26.701 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-11 16:06:29.996 [main] DataProviderHibernate - save[1]: saving entity MediaMSDevice(familyMode=true)
+[INFO ] 2022-05-11 16:06:30.107 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-11 16:15:39.061 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-11 16:15:41.207 [main] DataProviderHibernate - save[1]: saving entity CommMSDevice(frequency=450)
+[INFO ] 2022-05-11 16:15:41.409 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-12 20:19:38.191 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-12 20:19:40.741 [main] DataProviderHibernate - get[1]: getting entry by id 0 with class class ru.sfedu.log4jproject.model.entity.mapped_superclass.CommMSDevice
+[ERROR] 2022-05-12 20:19:40.798 [main] DataProviderHibernate - get[3]: Unable to locate persister: class ru.sfedu.log4jproject.model.entity.mapped_superclass.CommMSDevice
+[INFO ] 2022-05-12 20:26:15.562 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-12 20:26:17.742 [main] DataProviderHibernate - get[1]: getting entry by id 0
+[ERROR] 2022-05-12 20:26:17.797 [main] DataProviderHibernate - get[3]: Unable to locate persister: ms_CommDevice
+[INFO ] 2022-05-12 20:34:18.578 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-12 20:34:20.660 [main] DataProviderHibernate - get[1]: getting entry by id 0
+[ERROR] 2022-05-12 20:34:20.712 [main] DataProviderHibernate - get[3]: Unable to locate persister: class ru.sfedu.log4jproject.model.entity.mapped_superclass.CommMSDevice
+[INFO ] 2022-05-12 20:37:51.375 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-12 20:37:53.472 [main] DataProviderHibernate - get[1]: getting entry by id 0
+[INFO ] 2022-05-12 20:37:53.576 [main] DataProviderHibernate - get[2]: got entry CommMSDevice(frequency=450)
+[INFO ] 2022-05-12 20:44:16.138 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-12 20:44:18.247 [main] DataProviderHibernate - get[1]: getting entry by id 0
+[ERROR] 2022-05-12 20:44:18.307 [main] DataProviderHibernate - get[3]: Unable to locate persister: class ru.sfedu.log4jproject.model.entity.mapped_superclass.CommMSDevice
+[INFO ] 2022-05-12 20:46:45.175 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-12 20:46:47.227 [main] DataProviderHibernate - get[1]: getting entry by id 0
+[INFO ] 2022-05-12 20:46:47.329 [main] DataProviderHibernate - get[2]: got entry CommMSDevice(frequency=450)
+[INFO ] 2022-05-12 20:50:36.508 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-12 20:50:38.552 [main] DataProviderHibernate - get[1]: getting entry by id 0
+[INFO ] 2022-05-12 20:50:38.651 [main] DataProviderHibernate - get[2]: got entry CommMSDevice(frequency=450)
+[INFO ] 2022-05-12 20:50:38.653 [main] DataProviderHibernate - update[1]: updating entity CommMSDevice(frequency=550)
+[INFO ] 2022-05-12 20:50:38.689 [main] DataProviderHibernate - update[2]: entry successfully updated
+[INFO ] 2022-05-12 20:54:11.018 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-12 20:54:13.090 [main] DataProviderHibernate - get[1]: getting entry by id 0
+[INFO ] 2022-05-12 20:54:13.191 [main] DataProviderHibernate - get[2]: got entry CommMSDevice(frequency=550)
+[INFO ] 2022-05-12 20:54:13.193 [main] DataProviderHibernate - delete[1]: deleting entry Result{message='Success', entity=CommMSDevice(frequency=550), code=SUCCESS}
+[ERROR] 2022-05-12 20:54:13.199 [main] DataProviderHibernate - delete[3]: Unknown entity: ru.sfedu.log4jproject.model.Result
+[INFO ] 2022-05-12 20:54:36.163 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-12 20:54:38.202 [main] DataProviderHibernate - get[1]: getting entry by id 0
+[INFO ] 2022-05-12 20:54:38.301 [main] DataProviderHibernate - get[2]: got entry CommMSDevice(frequency=550)
+[INFO ] 2022-05-12 20:54:38.303 [main] DataProviderHibernate - delete[1]: deleting entry CommMSDevice(frequency=550)
+[INFO ] 2022-05-12 20:54:38.318 [main] DataProviderHibernate - delete[2]: entry successfully deleted
+[INFO ] 2022-05-13 18:50:52.315 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-13 18:50:56.588 [main] DataProviderHibernate - save[1]: saving entity CommMSDevice(frequency=450)
+[INFO ] 2022-05-13 18:50:56.738 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-15 12:56:43.817 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-15 12:56:47.072 [main] DataProviderHibernate - save[1]: saving entity CommJTDevice(frequency=488)
+[INFO ] 2022-05-15 12:56:47.215 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-15 13:01:56.411 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-15 13:01:58.902 [main] DataProviderHibernate - save[1]: saving entity CommJTDevice(frequency=488)
+[INFO ] 2022-05-15 13:01:59.044 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-15 13:19:29.825 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-15 13:19:31.926 [main] DataProviderHibernate - save[1]: saving entity CommJTDevice(frequency=488)
+[INFO ] 2022-05-15 13:19:32.032 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-15 13:26:17.727 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-15 13:26:19.879 [main] DataProviderHibernate - save[1]: saving entity MediaJTDevice(familyMode=false)
+[INFO ] 2022-05-15 13:26:19.976 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-15 14:18:04.533 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-15 14:18:06.985 [main] DataProviderHibernate - save[1]: saving entity CommJTDevice{id=0manufacturer=KineticserialNumber=321775frequency=488}
+[INFO ] 2022-05-15 14:18:07.109 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-15 14:19:19.948 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-15 14:19:22.111 [main] DataProviderHibernate - save[1]: saving entity MediaJTDevice{id=0manufacturer=SamsungserialNumber=990998familyMode=false}
+[INFO ] 2022-05-15 14:19:22.239 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-15 15:54:53.662 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-15 15:54:55.987 [main] DataProviderHibernate - save[1]: saving entity MediaSTDevice{id=0manufacturer=LenovoserialNumber=552830familyMode=false}
+[INFO ] 2022-05-15 15:54:56.112 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-15 15:55:58.249 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-15 15:56:00.420 [main] DataProviderHibernate - save[1]: saving entity CommSTDevice{id=0manufacturer=LizardmanserialNumber=400302frequency=448}
+[INFO ] 2022-05-15 15:56:00.546 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-15 16:05:36.022 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-15 16:05:38.390 [main] DataProviderHibernate - save[1]: saving entity MediaTPCDevice{id=0manufacturer=PanasonicserialNumber=110133familyMode=true}
+[INFO ] 2022-05-15 16:05:38.493 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-15 16:06:45.690 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-15 16:06:47.894 [main] DataProviderHibernate - save[1]: saving entity CommTPCDevice{id=0manufacturer=TyrionserialNumber=835295frequency=475}
+[INFO ] 2022-05-15 16:06:48.000 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-15 16:11:27.879 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-15 16:11:30.099 [main] DataProviderHibernate - get[1]: getting entry by id 12
+[INFO ] 2022-05-15 16:11:30.267 [main] DataProviderHibernate - get[2]: got entry CommTPCDevice{id=12manufacturer=TyrionserialNumber=835295frequency=475}
+[INFO ] 2022-05-15 16:13:28.027 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-15 16:13:30.303 [main] DataProviderHibernate - get[1]: getting entry by id 12
+[INFO ] 2022-05-15 16:13:30.449 [main] DataProviderHibernate - get[2]: got entry CommTPCDevice{id=12, manufacturer=Tyrion, serialNumber=835295, frequency=475}
+[INFO ] 2022-05-15 16:14:50.922 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-15 16:14:53.097 [main] DataProviderHibernate - get[1]: getting entry by id 7
+[INFO ] 2022-05-15 16:14:53.244 [main] DataProviderHibernate - get[2]: got entry CommJTDevice{id=7, manufacturer=Kinetic, serialNumber=321775, frequency=488}
+[INFO ] 2022-05-15 16:15:27.454 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-15 16:15:29.622 [main] DataProviderHibernate - get[1]: getting entry by id 0
+[INFO ] 2022-05-15 16:15:29.731 [main] DataProviderHibernate - get[2]: got entry CommMSDevice{id=0, manufacturer=LG, serialNumber=251024, frequency=450}
+[INFO ] 2022-05-15 16:16:02.074 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-15 16:16:04.306 [main] DataProviderHibernate - get[1]: getting entry by id 2
+[INFO ] 2022-05-15 16:16:04.389 [main] DataProviderHibernate - get[2]: got entry null
+[INFO ] 2022-05-15 16:17:03.710 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-15 16:17:05.887 [main] DataProviderHibernate - get[1]: getting entry by id 2
+[INFO ] 2022-05-15 16:17:05.983 [main] DataProviderHibernate - get[2]: got entry null
+[INFO ] 2022-05-15 16:17:42.687 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-15 16:17:44.989 [main] DataProviderHibernate - get[1]: getting entry by id 10
+[INFO ] 2022-05-15 16:17:45.099 [main] DataProviderHibernate - get[2]: got entry CommSTDevice{id=10, manufacturer=Lizardman, serialNumber=400302, frequency=448}
+[INFO ] 2022-05-15 16:18:02.561 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-15 16:18:04.833 [main] DataProviderHibernate - get[1]: getting entry by id 10
+[INFO ] 2022-05-15 16:18:04.946 [main] DataProviderHibernate - get[2]: got entry CommSTDevice{id=10, manufacturer=Lizardman, serialNumber=400302, frequency=448}
+[INFO ] 2022-05-15 16:19:56.661 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-15 16:19:58.862 [main] DataProviderHibernate - get[1]: getting entry by id 7
+[INFO ] 2022-05-15 16:19:58.973 [main] DataProviderHibernate - get[2]: got entry CommJTDevice{id=7, manufacturer=Kinetic, serialNumber=321775, frequency=488}
+[INFO ] 2022-05-15 16:19:58.974 [main] DataProviderHibernate - update[1]: updating entity CommJTDevice{id=7, manufacturer=Kinetic, serialNumber=321775, frequency=486}
+[INFO ] 2022-05-15 16:19:58.990 [main] DataProviderHibernate - update[2]: entry successfully updated
+[INFO ] 2022-05-18 09:24:43.045 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-18 09:24:45.719 [main] DataProviderHibernate - save[1]: saving entity MediaSTDevice{id=0, manufacturer=Nokia, serialNumber=111111, familyMode=false}
+[INFO ] 2022-05-18 09:24:45.890 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
