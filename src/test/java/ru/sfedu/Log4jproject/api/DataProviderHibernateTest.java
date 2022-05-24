@@ -4,17 +4,22 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
 import ru.sfedu.log4jproject.model.entity.TestEntity;
+import ru.sfedu.log4jproject.model.entity.component_collection.CCBuilding;
+import ru.sfedu.log4jproject.model.entity.component_collection.CMBuilding;
+import ru.sfedu.log4jproject.model.entity.component_collection.Network;
 import ru.sfedu.log4jproject.model.entity.joined_table.CommJTDevice;
-import ru.sfedu.log4jproject.model.entity.joined_table.MediaJTDevice;
+import ru.sfedu.log4jproject.model.entity.list_collection.LCBuilding;
+import ru.sfedu.log4jproject.model.entity.many_to_many.MTMDistributor;
+import ru.sfedu.log4jproject.model.entity.many_to_many.MTMFacility;
+import ru.sfedu.log4jproject.model.entity.map_collection.MCBuilding;
 import ru.sfedu.log4jproject.model.entity.mapped_superclass.CommMSDevice;
-import ru.sfedu.log4jproject.model.entity.mapped_superclass.MediaMSDevice;
-import ru.sfedu.log4jproject.model.entity.single_table.CommSTDevice;
-import ru.sfedu.log4jproject.model.entity.single_table.MediaSTDevice;
-import ru.sfedu.log4jproject.model.entity.single_table.STDevice;
-import ru.sfedu.log4jproject.model.entity.table_per_class.CommTPCDevice;
-import ru.sfedu.log4jproject.model.entity.table_per_class.MediaTPCDevice;
+import ru.sfedu.log4jproject.model.entity.one_to_many.Client;
+import ru.sfedu.log4jproject.model.entity.one_to_many.Office;
+import ru.sfedu.log4jproject.model.entity.one_to_one.*;
+import ru.sfedu.log4jproject.model.entity.set_collection.SCBuilding;
 
 import java.time.LocalDate;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -184,23 +189,69 @@ class DataProviderHibernateTest {
             DataProviderHibernate dataProvider = new DataProviderHibernate();
 
             /* Entities initialization */
-            //Mapped superclass
-            MediaMSDevice mediaMS = new MediaMSDevice("Sony", 450903, true);
-            CommMSDevice commMS = new CommMSDevice("LG", 251024, 450);
-
-            //Joined table
-            MediaJTDevice mediaJT = new MediaJTDevice("Samsung", 990998, false);
-            CommJTDevice commJT = new CommJTDevice("Kinetic", 321775, 488);
-
-            //Single table
-            MediaSTDevice mediaST = new MediaSTDevice("Nokia", 111111, false);
-            CommSTDevice commST = new CommSTDevice("Lizardman", 400302, 448);
-
-            MediaTPCDevice mediaTPC = new MediaTPCDevice("Panasonic", 110133, true);
-            CommTPCDevice commTPC = new CommTPCDevice("Tyrion", 835295,475);
+            //sc_building
+            Set<String> scNetworks = new HashSet<String>();
+            scNetworks.add("Coworking network");
+            scNetworks.add("Director network");
+            scNetworks.add("Maintenance network");
+            SCBuilding scBuilding = new SCBuilding("Office", scNetworks);
+            //lc_building
+            List<String> lcNetworks = new ArrayList<String>();
+            lcNetworks.add("Transfer network");
+            lcNetworks.add("Clerk network");
+            lcNetworks.add("Security network");
+            LCBuilding lcBuilding = new LCBuilding("Bank", lcNetworks);
+            //mc_building
+            Map<String, String> mcNetworks = new HashMap<String, String>();
+            mcNetworks.put("255.255.154.96", "Client network");
+            mcNetworks.put("255.255.154.92", "Distributor network");
+            mcNetworks.put("255.255.155.31", "Director network");
+            MCBuilding mcBuilding = new MCBuilding("Restaurant", mcNetworks);
+            //cc_building
+            Network neighborhoodNet = new Network("Dream House Corporation", "255.255.255.56", 1500, 488);
+            CCBuilding ccBuilding = new CCBuilding();
+            ccBuilding.setName("Lake-shore Estate");
+            ccBuilding.getNetworks().add(neighborhoodNet);
+            //cm_building
+            Network workersNetwork = new Network("Vierra Softworks Group", "255.255.126.12", 175, 1024);
+            CMBuilding cmBuilding = new CMBuilding();
+            cmBuilding.setName("Vierra Softworks HQ");
+            cmBuilding.getNetworks().put("coworking", workersNetwork);
+            //one_to_many
+            Office office = new Office("19th Avenue 2453");
+            Client client1 = new Client(office, "Joshua Bernski", "+1(534)670-89-43");
+            Client client2 = new Client(office, "Mike Sinnegale", "+1(700)112-55-56");
+            office.getClients().add(client1);
+            office.getClients().add(client2);
+            //one_to_one shared foreign key
+            SharedFKManager SFKManager = new SharedFKManager("Linus Pulowski", 3);
+            SharedFKFacility SFKFacility = new SharedFKFacility(1,"Mill St. 782",SFKManager);
+            //one_to_one generated foreign primary key
+            GeneratedFKFacility GFKFacility = new GeneratedFKFacility("Principle St. 4120");
+            GeneratedFKManager GFKManager = new GeneratedFKManager(GFKFacility, "Lewis Brown", 2);
+            GFKFacility.setManager(GFKManager);
+            //one_to_one foreign key
+            FKManager FKmanager = new FKManager("Antonio Ferrera", 2);
+            FKFacility FKfacility = new FKFacility(FKmanager, "Kalvin St. 1253");
+            //many_to_many
+            MTMDistributor electronics = new MTMDistributor("Electronics", "TrueWireless");
+            MTMDistributor food = new MTMDistributor("Food", "Pepsi Co");
+            MTMFacility sideOffice = new MTMFacility("7th St. 934");
+            MTMFacility headQuarters = new MTMFacility("Ocean Ave. 1002");
+            electronics.getFacilities().add(sideOffice);
+            electronics.getFacilities().add(headQuarters);
+            food.getFacilities().add(sideOffice);
+            food.getFacilities().add(headQuarters);
+            sideOffice.getDistributors().add(electronics);
+            sideOffice.getDistributors().add(food);
+            headQuarters.getDistributors().add(electronics);
+            headQuarters.getDistributors().add(food);
             /* End of initialization */
+            dataProvider.save(electronics);
+            dataProvider.save(food);
+            dataProvider.save(sideOffice);
+            dataProvider.save(headQuarters);
 
-            dataProvider.save(mediaST);
         } catch (Exception ex){
             log.error("save test Success - Failure");
             fail(ex.getMessage());
@@ -212,7 +263,7 @@ class DataProviderHibernateTest {
         try{
             log.info("get test Success");
             DataProviderHibernate dataProvider = new DataProviderHibernate();
-            dataProvider.get(CommSTDevice.class, 10);
+            dataProvider.get(GeneratedFKFacility.class, 36);
         } catch (Exception ex){
             log.error("save test Success - Failure");
             fail(ex.getMessage());

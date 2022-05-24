@@ -1950,3 +1950,192 @@ CREATE TABLE IF NOT EXISTS Users(ID INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
 [INFO ] 2022-05-18 09:24:43.045 [main] DataProviderHibernateTest - save test Success
 [INFO ] 2022-05-18 09:24:45.719 [main] DataProviderHibernate - save[1]: saving entity MediaSTDevice{id=0, manufacturer=Nokia, serialNumber=111111, familyMode=false}
 [INFO ] 2022-05-18 09:24:45.890 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-20 12:36:55.223 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-20 12:36:58.030 [main] DataProviderHibernate - save[1]: saving entity SCItem(id=0, images=[lumber.jpg, leaves.png, lion.jpeg])
+[ERROR] 2022-05-20 12:36:58.123 [main] DataProviderHibernate - saveTestEntity[3]: Unknown entity: ru.sfedu.log4jproject.model.entity.set_collection.SCBuilding
+[INFO ] 2022-05-20 12:38:47.420 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-20 12:38:50.066 [main] DataProviderHibernate - save[1]: saving entity SCItem(id=0, images=[lumber.jpg, leaves.png, lion.jpeg])
+[INFO ] 2022-05-20 12:38:50.226 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-20 12:42:03.364 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-20 12:42:05.872 [main] DataProviderHibernate - save[1]: saving entity SCItem(id=0, images=[lumber.jpg, leaves.png, lion.jpeg], name=Nature)
+[INFO ] 2022-05-20 12:42:06.016 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-20 15:30:44.150 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-20 15:30:46.710 [main] DataProviderHibernate - save[1]: saving entity LCItem(id=0, images=[worker.jpg, sailor.png, officer.jpeg], name=People)
+[INFO ] 2022-05-20 15:30:46.834 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-20 15:32:54.108 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-20 15:32:56.551 [main] DataProviderHibernate - save[1]: saving entity LCItem(id=0, images=[worker.jpg, sailor.png, officer.jpeg], name=People)
+[INFO ] 2022-05-20 15:32:56.665 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-20 19:07:00.516 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-20 19:07:02.975 [main] DataProviderHibernate - save[1]: saving entity MCItem(id=0, images={helicopter.jpg=helicopter, plane.jpeg=plane, ship.png=ship}, name=transport)
+[INFO ] 2022-05-20 19:07:03.087 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-20 19:53:06.870 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-20 19:53:09.670 [main] DataProviderHibernate - save[1]: saving entity CCItem(id=0, images=[ru.sfedu.log4jproject.model.entity.component_collection.CCBuilding$Image@7345f97d], name=null)
+[INFO ] 2022-05-20 19:53:09.793 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-20 19:56:33.841 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-20 19:56:36.262 [main] DataProviderHibernate - save[1]: saving entity CCItem(id=0, images=[ru.sfedu.log4jproject.model.entity.component_collection.CCBuilding$Image@2b44605c], name=Animals)
+[INFO ] 2022-05-20 19:56:36.364 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-20 20:17:12.735 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-20 20:17:15.790 [main] DataProviderHibernate - save[1]: saving entity CCItem(id=0, images=[Image(title=bear, filename=bear.jpg, width=1920, height=1080)], name=Animals)
+[INFO ] 2022-05-20 20:17:15.911 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-20 20:18:30.720 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-20 20:18:33.064 [main] DataProviderHibernate - save[1]: saving entity CMItem(id=0, images={lake=Image(title=lake, filename=lake.png, width=1280, height=1024)}, name=Nature)
+[INFO ] 2022-05-20 20:18:33.177 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-20 21:14:06.382 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-20 21:14:08.742 [main] DataProviderHibernate - get[1]: getting entry by id 22
+[INFO ] 2022-05-20 21:14:08.817 [main] DataProviderHibernate - get[2]: got entry null
+[INFO ] 2022-05-20 21:15:23.203 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-20 21:15:25.561 [main] DataProviderHibernate - get[1]: getting entry by id 22
+[ERROR] 2022-05-20 21:15:25.616 [main] DataProviderHibernate - get[3]: Unable to locate persister: ru.sfedu.log4jproject.model.entity.component_collection.Network
+[INFO ] 2022-05-20 21:15:52.985 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-20 21:15:55.454 [main] DataProviderHibernate - get[1]: getting entry by id 22
+[INFO ] 2022-05-20 21:15:55.554 [main] DataProviderHibernate - get[2]: got entry [!!!ru.sfedu.log4jproject.model.entity.component_collection.CMBuilding@3e151e1f=>org.hibernate.LazyInitializationException:failed to lazily initialize a collection of role: ru.sfedu.log4jproject.model.entity.component_collection.CMBuilding.images, could not initialize proxy - no Session!!!]
+[INFO ] 2022-05-20 21:18:50.741 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-20 21:18:53.107 [main] DataProviderHibernate - get[1]: getting entry by id 15
+[INFO ] 2022-05-20 21:18:53.205 [main] DataProviderHibernate - get[2]: got entry [!!!ru.sfedu.log4jproject.model.entity.set_collection.SCBuilding@239b98cb=>org.hibernate.LazyInitializationException:failed to lazily initialize a collection of role: ru.sfedu.log4jproject.model.entity.set_collection.SCBuilding.images, could not initialize proxy - no Session!!!]
+[INFO ] 2022-05-20 21:29:37.509 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-20 21:29:39.900 [main] DataProviderHibernate - get[1]: getting entry by id 15
+[INFO ] 2022-05-20 21:29:40.013 [main] DataProviderHibernate - get[2]: got entry SCItem(id=15, images=[lumber.jpg, leaves.png, lion.jpeg], name=Nature)
+[INFO ] 2022-05-21 12:26:51.744 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-21 12:26:54.730 [main] DataProviderHibernate - get[1]: getting entry by id 18
+[INFO ] 2022-05-21 12:26:54.882 [main] DataProviderHibernate - get[2]: got entry MCItem(id=18, images={helicopter.jpg=helicopter, plane.jpeg=plane, ship.png=ship}, name=transport)
+[INFO ] 2022-05-21 12:27:51.858 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-21 12:27:54.286 [main] DataProviderHibernate - get[1]: getting entry by id 17
+[INFO ] 2022-05-21 12:27:54.525 [main] DataProviderHibernate - get[2]: got entry LCItem(id=17, images=[worker.jpg, sailor.png, officer.jpeg], name=People)
+[INFO ] 2022-05-21 12:28:24.768 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-21 12:28:27.166 [main] DataProviderHibernate - get[1]: getting entry by id 22
+[INFO ] 2022-05-21 12:28:27.402 [main] DataProviderHibernate - get[2]: got entry CMItem(id=22, images={lake=Image(title=lake, filename=lake.png, width=1280, height=1024)}, name=Nature)
+[INFO ] 2022-05-21 13:22:21.662 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-21 13:22:25.142 [main] DataProviderHibernate - save[1]: saving entity SCBuilding(id=0, networks=[Coworking network, Director network, Maintenance network], name=Office)
+[INFO ] 2022-05-21 13:22:25.286 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-21 13:22:25.289 [main] DataProviderHibernate - save[1]: saving entity LCBuilding(id=0, networks=[Transfer network, Clerk network, Security network], name=Bank)
+[INFO ] 2022-05-21 13:22:25.296 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-21 13:22:25.296 [main] DataProviderHibernate - save[1]: saving entity MCBuilding(id=0, networks={Director network=255.255.155.31, Client network=255.255.154.96, Distributor network=255.255.154.92}, name=Restaurant)
+[INFO ] 2022-05-21 13:22:25.305 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-21 13:22:25.310 [main] DataProviderHibernate - save[1]: saving entity CCBuilding(id=0, networks=[Network(owner=Dream House Corporation, ip=255.255.255.56, range=1500, freq=488)], name=Lake-shore Estate)
+[INFO ] 2022-05-21 13:22:25.315 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-21 13:22:25.316 [main] DataProviderHibernate - save[1]: saving entity CMBuilding(id=0, networks={coworking=Network(owner=Vierra Softworks Group, ip=255.255.126.12, range=175, freq=1024)}, name=Vierra Softworks HQ)
+[INFO ] 2022-05-21 13:22:25.321 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-23 20:24:28.478 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-23 20:24:31.774 [main] DataProviderHibernate - save[1]: saving entity Office(id=0, address=19th Avenue 2453)
+[INFO ] 2022-05-23 20:24:31.905 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-23 20:43:52.207 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-23 20:43:54.922 [main] DataProviderHibernate - save[1]: saving entity Office(id=0, address=19th Avenue 2453)
+[INFO ] 2022-05-23 20:43:55.044 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-23 20:45:42.951 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-23 20:46:45.639 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-23 20:46:48.140 [main] DataProviderHibernateTest - Office(id=0, address=19th Avenue 2453)
+[INFO ] 2022-05-23 22:11:16.065 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-23 22:11:18.598 [main] DataProviderHibernate - save[1]: saving entity Office(id=0, address=19th Avenue 2453)
+[INFO ] 2022-05-23 22:11:18.718 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-23 22:11:18.724 [main] DataProviderHibernate - save[1]: saving entity Client(id=0, office=Office(id=30, address=19th Avenue 2453), name=Joshua Bernski, phone=+1(534)670-89-43)
+[INFO ] 2022-05-23 22:11:18.729 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-23 22:11:18.729 [main] DataProviderHibernate - save[1]: saving entity Client(id=0, office=Office(id=30, address=19th Avenue 2453), name=Mike Sinnegale, phone=+1(700)112-55-56)
+[INFO ] 2022-05-23 22:11:18.732 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-24 13:41:09.550 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 13:41:15.695 [main] DataProviderHibernate - save[1]: saving entity SharedFKManager(id=0, name=Linus Pulowski, accessLevel=3)
+[INFO ] 2022-05-24 13:41:15.831 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-24 13:41:15.835 [main] DataProviderHibernate - save[1]: saving entity SharedFKFacility(id=0, manager=SharedFKManager(id=33, name=Linus Pulowski, accessLevel=3))
+[ERROR] 2022-05-24 13:41:15.852 [main] DataProviderHibernate - saveTestEntity[3]: org.hibernate.exception.ConstraintViolationException: could not execute statement
+[INFO ] 2022-05-24 13:45:54.653 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 13:45:57.232 [main] DataProviderHibernate - save[1]: saving entity SharedFKFacility(id=0, address=Mill St. 782, manager=SharedFKManager(id=0, name=Linus Pulowski, accessLevel=3))
+[ERROR] 2022-05-24 13:45:57.340 [main] DataProviderHibernate - saveTestEntity[3]: org.hibernate.exception.ConstraintViolationException: could not execute statement
+[INFO ] 2022-05-24 14:26:09.402 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 14:26:11.938 [main] DataProviderHibernate - save[1]: saving entity SharedFKFacility(id=0, address=Mill St. 782)
+[ERROR] 2022-05-24 14:26:12.042 [main] DataProviderHibernate - saveTestEntity[3]: org.hibernate.exception.ConstraintViolationException: could not execute statement
+[INFO ] 2022-05-24 14:31:35.677 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 14:31:38.376 [main] DataProviderHibernate - save[1]: saving entity SharedFKFacility(id=0, address=Mill St. 782)
+[ERROR] 2022-05-24 14:31:38.502 [main] DataProviderHibernate - saveTestEntity[3]: org.hibernate.exception.ConstraintViolationException: could not execute statement
+[INFO ] 2022-05-24 14:33:02.758 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 14:33:05.276 [main] DataProviderHibernate - save[1]: saving entity SharedFKFacility(id=33, address=Mill St. 782)
+[INFO ] 2022-05-24 14:33:05.369 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-24 14:52:18.503 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 14:52:21.209 [main] DataProviderHibernate - save[1]: saving entity SharedFKFacility(id=1, address=Mill St. 782)
+[ERROR] 2022-05-24 14:52:21.321 [main] DataProviderHibernate - saveTestEntity[3]: org.hibernate.exception.ConstraintViolationException: could not execute statement
+[INFO ] 2022-05-24 14:53:34.733 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 14:53:37.307 [main] DataProviderHibernate - save[1]: saving entity SharedFKFacility(id=1, address=Mill St. 782)
+[ERROR] 2022-05-24 14:53:37.412 [main] DataProviderHibernate - saveTestEntity[3]: org.hibernate.exception.ConstraintViolationException: could not execute statement
+[INFO ] 2022-05-24 15:11:28.453 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 15:11:31.021 [main] DataProviderHibernate - save[1]: saving entity SharedFKFacility(id=1, address=Mill St. 782)
+[ERROR] 2022-05-24 15:11:31.129 [main] DataProviderHibernate - saveTestEntity[3]: org.hibernate.exception.ConstraintViolationException: could not execute statement
+[INFO ] 2022-05-24 15:12:02.692 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 15:12:05.223 [main] DataProviderHibernate - save[1]: saving entity SharedFKFacility(id=1, address=Mill St. 782)
+[ERROR] 2022-05-24 15:12:05.335 [main] DataProviderHibernate - saveTestEntity[3]: org.hibernate.exception.ConstraintViolationException: could not execute statement
+[INFO ] 2022-05-24 15:12:58.850 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 15:13:01.458 [main] DataProviderHibernate - save[1]: saving entity SharedFKFacility(id=1, address=Mill St. 782)
+[ERROR] 2022-05-24 15:13:01.572 [main] DataProviderHibernate - saveTestEntity[3]: org.hibernate.exception.ConstraintViolationException: could not execute statement
+[INFO ] 2022-05-24 15:19:33.899 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 15:19:36.459 [main] DataProviderHibernate - save[1]: saving entity SharedFKFacility(id=1, address=Mill St. 782)
+[ERROR] 2022-05-24 15:19:36.565 [main] DataProviderHibernate - saveTestEntity[3]: org.hibernate.exception.ConstraintViolationException: could not execute statement
+[INFO ] 2022-05-24 15:23:00.316 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 15:23:02.971 [main] DataProviderHibernate - save[1]: saving entity SharedFKFacility(id=1, address=Mill St. 782)
+[ERROR] 2022-05-24 15:23:03.079 [main] DataProviderHibernate - saveTestEntity[3]: org.hibernate.exception.ConstraintViolationException: could not execute statement
+[INFO ] 2022-05-24 15:25:15.322 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 15:25:18.057 [main] DataProviderHibernate - save[1]: saving entity SharedFKFacility(id=1, address=Mill St. 782)
+[ERROR] 2022-05-24 15:25:18.165 [main] DataProviderHibernate - saveTestEntity[3]: org.hibernate.exception.ConstraintViolationException: could not execute statement
+[INFO ] 2022-05-24 15:26:42.037 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 15:26:44.608 [main] DataProviderHibernate - save[1]: saving entity SharedFKFacility(id=1, address=Mill St. 782)
+[ERROR] 2022-05-24 15:26:44.734 [main] DataProviderHibernate - saveTestEntity[3]: org.hibernate.exception.ConstraintViolationException: could not execute statement
+[INFO ] 2022-05-24 15:30:04.619 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 15:30:07.222 [main] DataProviderHibernate - save[1]: saving entity SharedFKFacility(id=1, address=Mill St. 782)
+[ERROR] 2022-05-24 15:30:07.330 [main] DataProviderHibernate - saveTestEntity[3]: org.hibernate.exception.ConstraintViolationException: could not execute statement
+[INFO ] 2022-05-24 15:38:26.961 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 15:38:29.643 [main] DataProviderHibernate - save[1]: saving entity [!!!ru.sfedu.log4jproject.model.entity.one_to_one.GeneratedFKFacility@537ca28e=>java.lang.StackOverflowError:null!!!]
+[INFO ] 2022-05-24 15:38:29.744 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-24 15:44:59.735 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 15:45:02.352 [main] DataProviderHibernate - save[1]: saving entity [!!!ru.sfedu.log4jproject.model.entity.one_to_one.GeneratedFKManager@61808ecd=>java.lang.StackOverflowError:null!!!]
+[INFO ] 2022-05-24 15:45:02.470 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-24 15:45:58.875 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 15:46:01.527 [main] DataProviderHibernate - save[1]: saving entity [!!!ru.sfedu.log4jproject.model.entity.one_to_one.GeneratedFKManager@516195cf=>java.lang.StackOverflowError:null!!!]
+[INFO ] 2022-05-24 15:46:01.633 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-24 15:59:38.129 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 15:59:41.026 [main] DataProviderHibernate - save[1]: saving entity FKFacility(id=0, address=Kalvin St. 1253)
+[ERROR] 2022-05-24 15:59:41.109 [main] DataProviderHibernate - saveTestEntity[3]: Not-null property references a transient value - transient instance must be saved before current operation : ru.sfedu.log4jproject.model.entity.one_to_one.FKFacility.manager -> ru.sfedu.log4jproject.model.entity.one_to_one.FKManager
+[INFO ] 2022-05-24 16:00:19.055 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 16:00:21.763 [main] DataProviderHibernate - save[1]: saving entity FKManager(id=0, name=Antonio Ferrera, accessLevel=2)
+[INFO ] 2022-05-24 16:00:21.857 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-24 16:00:21.861 [main] DataProviderHibernate - save[1]: saving entity FKFacility(id=0, address=Kalvin St. 1253)
+[INFO ] 2022-05-24 16:00:21.870 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-24 19:19:30.730 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 19:19:33.741 [main] DataProviderHibernate - save[1]: saving entity MTMDistributor(id=0, type=Electronics, name=TrueWireless)
+[INFO ] 2022-05-24 19:19:33.855 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-24 19:21:25.136 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 19:21:28.067 [main] DataProviderHibernate - save[1]: saving entity MTMFacility(id=0, address=7th St. 934)
+[ERROR] 2022-05-24 19:21:28.186 [main] DataProviderHibernate - saveTestEntity[3]: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: ru.sfedu.log4jproject.model.entity.many_to_many.MTMDistributor
+[INFO ] 2022-05-24 19:21:28.189 [main] DataProviderHibernate - save[1]: saving entity MTMFacility(id=0, address=Ocean Ave. 1002)
+[ERROR] 2022-05-24 19:21:28.193 [main] DataProviderHibernate - saveTestEntity[3]: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: ru.sfedu.log4jproject.model.entity.many_to_many.MTMDistributor
+[INFO ] 2022-05-24 19:21:28.198 [main] DataProviderHibernate - save[1]: saving entity MTMDistributor(id=0, type=Electronics, name=TrueWireless)
+[INFO ] 2022-05-24 19:21:28.206 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-24 19:21:28.206 [main] DataProviderHibernate - save[1]: saving entity MTMDistributor(id=0, type=Food, name=Pepsi Co)
+[INFO ] 2022-05-24 19:21:28.209 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-24 19:22:34.838 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 19:22:37.529 [main] DataProviderHibernate - save[1]: saving entity MTMFacility(id=0, address=7th St. 934)
+[ERROR] 2022-05-24 19:22:37.648 [main] DataProviderHibernate - saveTestEntity[3]: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: ru.sfedu.log4jproject.model.entity.many_to_many.MTMDistributor
+[INFO ] 2022-05-24 19:22:37.651 [main] DataProviderHibernate - save[1]: saving entity MTMFacility(id=0, address=Ocean Ave. 1002)
+[ERROR] 2022-05-24 19:22:37.654 [main] DataProviderHibernate - saveTestEntity[3]: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: ru.sfedu.log4jproject.model.entity.many_to_many.MTMDistributor
+[INFO ] 2022-05-24 19:23:36.881 [main] DataProviderHibernateTest - save test Success
+[INFO ] 2022-05-24 19:23:39.720 [main] DataProviderHibernate - save[1]: saving entity MTMDistributor(id=0, type=Electronics, name=TrueWireless)
+[INFO ] 2022-05-24 19:23:39.843 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-24 19:23:39.845 [main] DataProviderHibernate - save[1]: saving entity MTMDistributor(id=0, type=Food, name=Pepsi Co)
+[INFO ] 2022-05-24 19:23:39.848 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-24 19:23:39.851 [main] DataProviderHibernate - save[1]: saving entity MTMFacility(id=0, address=7th St. 934)
+[INFO ] 2022-05-24 19:23:39.860 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-24 19:23:39.861 [main] DataProviderHibernate - save[1]: saving entity MTMFacility(id=0, address=Ocean Ave. 1002)
+[INFO ] 2022-05-24 19:23:39.865 [main] DataProviderHibernate - saveTestEntity[2]: entity is successfully saved
+[INFO ] 2022-05-24 19:24:58.656 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-24 19:25:01.415 [main] DataProviderHibernate - get[1]: getting entry by id 50
+[INFO ] 2022-05-24 19:25:01.546 [main] DataProviderHibernate - get[2]: got entry MTMFacility(id=50, address=Ocean Ave. 1002)
+[INFO ] 2022-05-24 19:26:39.756 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-24 19:26:42.481 [main] DataProviderHibernate - get[1]: getting entry by id 30
+[INFO ] 2022-05-24 19:26:42.600 [main] DataProviderHibernate - get[2]: got entry Office(id=30, address=19th Avenue 2453)
+[INFO ] 2022-05-24 19:27:50.064 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-24 19:27:52.830 [main] DataProviderHibernate - get[1]: getting entry by id 39
+[INFO ] 2022-05-24 19:27:52.950 [main] DataProviderHibernate - get[2]: got entry FKFacility(id=39, address=Kalvin St. 1253)
+[INFO ] 2022-05-24 19:28:50.987 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-24 19:28:53.713 [main] DataProviderHibernate - get[1]: getting entry by id 35
+[INFO ] 2022-05-24 19:28:53.850 [main] DataProviderHibernate - get[2]: got entry [!!!ru.sfedu.log4jproject.model.entity.one_to_one.GeneratedFKManager@2a7bc16b=>java.lang.StackOverflowError:null!!!]
+[INFO ] 2022-05-24 19:29:26.742 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-24 19:29:29.505 [main] DataProviderHibernate - get[1]: getting entry by id 36
+[INFO ] 2022-05-24 19:29:29.622 [main] DataProviderHibernate - get[2]: got entry [!!!ru.sfedu.log4jproject.model.entity.one_to_one.GeneratedFKManager@4b544732=>java.lang.StackOverflowError:null!!!]
+[INFO ] 2022-05-24 19:31:43.288 [main] DataProviderHibernateTest - get test Success
+[INFO ] 2022-05-24 19:31:46.109 [main] DataProviderHibernate - get[1]: getting entry by id 36
+[INFO ] 2022-05-24 19:31:46.247 [main] DataProviderHibernate - get[2]: got entry [!!!ru.sfedu.log4jproject.model.entity.one_to_one.GeneratedFKFacility@3c3e363=>java.lang.StackOverflowError:null!!!]

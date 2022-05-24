@@ -34,5 +34,20 @@
         <mapping class="ru.sfedu.log4jproject.model.entity.table_per_class.TPCDevice"/>
         <mapping class="ru.sfedu.log4jproject.model.entity.table_per_class.CommTPCDevice"/>
         <mapping class="ru.sfedu.log4jproject.model.entity.table_per_class.MediaTPCDevice"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.set_collection.SCBuilding"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.list_collection.LCBuilding"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.map_collection.MCBuilding"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.component_collection.CCBuilding"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.component_collection.CMBuilding"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.one_to_many.Client"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.one_to_many.Office"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.one_to_one.SharedFKManager"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.one_to_one.SharedFKFacility"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.one_to_one.GeneratedFKFacility"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.one_to_one.GeneratedFKManager"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.one_to_one.FKManager"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.one_to_one.FKFacility"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.many_to_many.MTMDistributor"/>
+        <mapping class="ru.sfedu.log4jproject.model.entity.many_to_many.MTMFacility"/>
     </session-factory>
 </hibernate-configuration>
