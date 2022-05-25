@@ -8,9 +8,12 @@ import ru.sfedu.log4jproject.Constants;
 import ru.sfedu.log4jproject.model.CodeType;
 import ru.sfedu.log4jproject.model.Result;
 import ru.sfedu.log4jproject.model.entity.TestEntity;
-import ru.sfedu.log4jproject.model.entity.mapped_superclass.CommMSDevice;
 import ru.sfedu.log4jproject.utils.HibernateUtil;
 
+import javax.persistence.Query;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import java.util.ArrayList;
 import java.util.List;
 
 public class DataProviderHibernate {
@@ -171,6 +174,65 @@ public class DataProviderHibernate {
             session.close();
             log.error("get[3]: {}", ex.getMessage());
             return new Result<Object>(ex.getMessage(), null, CodeType.ERROR);
+        }
+    }
+
+    public <T>List<T> getViaCriteria(Class<T> clazz){
+        log.info("getViaCriteria[1]: getting entries {}", clazz);
+        Session session = sessionFactory.openSession();
+        try{
+            session.beginTransaction();
+            CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
+            CriteriaQuery<T> query = criteriaBuilder.createQuery(clazz);
+            query.from(clazz);
+            List<T> result = session.createQuery(query).getResultList();
+            session.getTransaction().commit();
+            session.close();
+            log.info("getViaCriteria[2]: got list {}", result);
+            return result;
+        } catch (Exception ex){
+            session.getTransaction().rollback();
+            session.close();
+            log.error("getViaCriteria[3]: {}", ex.getMessage());
+            return new ArrayList<>();
+        }
+    }
+
+    public <T> List<T> getViaSql(Class<T> clazz){
+        log.info("getViaSql[1]: getting entries {}", clazz);
+        Session session = sessionFactory.openSession();
+        try{
+            session.beginTransaction();
+            String name = session.getMetamodel().entity(clazz).getName();
+            List<T> result = session.createSQLQuery(Constants.POST_GET.concat(name)).list();
+            session.getTransaction().commit();
+            session.close();
+            log.info("getViaSql[2]: got result {}", result);
+            return result;
+        } catch(Exception ex){
+            session.getTransaction().rollback();
+            session.close();
+            log.error("getViaSql[3]: {}", ex.getMessage());
+            return new ArrayList<>();
+        }
+    }
+
+    public List getOfficesViaHql(){
+        log.info("getViaHql[1]: getting offices");
+        Session session = sessionFactory.openSession();
+        try{
+            session.beginTransaction();
+            Query query = session.createQuery("from Office ");
+            List result = query.getResultList();
+            session.getTransaction().commit();
+            session.close();
+            log.info("getViaHql[2]: got result {}", result);
+            return result;
+        } catch(Exception ex){
+            session.getTransaction().rollback();
+            session.close();
+            log.error("getViaHql[3]: {}", ex.getMessage());
+            return new ArrayList<>();
         }
     }
 

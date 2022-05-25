@@ -20,6 +20,7 @@ public class Constants {
             SELECT table_name FROM information_schema.tables
             WHERE table_schema NOT IN ('information_schema', 'pg_catalog')
             AND table_schema IN('public', 'Tables');""";
+    public final static String POST_GET = "SELECT * FROM ";
 
     public final static String MONGO_FIELD_TIME = "time";
     public static final String MONGO_FIELD_COMMAND = "command";

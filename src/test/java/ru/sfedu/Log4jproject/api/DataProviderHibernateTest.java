@@ -295,4 +295,43 @@ class DataProviderHibernateTest {
             fail(ex.getMessage());
         }
     }
+
+    @Test
+    void getViaCriteriaSuccess(){
+        try{
+            log.info("getViaCriteria test Success");
+            DataProviderHibernate dataProvider = new DataProviderHibernate();
+            dataProvider.getViaCriteria(SharedFKFacility.class);
+        } catch (Exception ex){
+            log.error("getViaCriteria test Success - Failure");
+            fail(ex.getMessage());
+        }
+    }
+
+    @Test
+    void getViaSqlSuccess(){
+        try{
+            log.info("getViaSql test Success");
+            DataProviderHibernate dataProvider = new DataProviderHibernate();
+            dataProvider.getViaSql(MTMFacility.class);
+        } catch (Exception ex){
+            log.error("getViaSql test Success - Failure");
+            fail(ex.getMessage());
+        }
+    }
+
+    @Test
+    void getOfficesViaHqlSuccess(){
+        try{
+            log.info("getViaHql test Success");
+            DataProviderHibernate dataProvider = new DataProviderHibernate();
+            dataProvider.getOfficesViaHql();
+        } catch (Exception ex){
+            log.error("getViaHql test Success - Failure");
+            fail(ex.getMessage());
+        }
+    }
+
+    //Как получать Generated FK сущности из бд?
+    //Как сделать универсальный HQL запрос?
 }
