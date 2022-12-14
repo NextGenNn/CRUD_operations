@@ -8,6 +8,7 @@ import ru.sfedu.log4jproject.Constants;
 import ru.sfedu.log4jproject.model.CodeType;
 import ru.sfedu.log4jproject.model.Result;
 import ru.sfedu.log4jproject.model.entity.TestEntity;
+import ru.sfedu.log4jproject.model.entity.one_to_many.Office;
 import ru.sfedu.log4jproject.utils.HibernateUtil;
 
 import javax.persistence.Query;
@@ -222,7 +223,7 @@ public class DataProviderHibernate {
         Session session = sessionFactory.openSession();
         try{
             session.beginTransaction();
-            Query query = session.createQuery("from Office ");
+            Query query = session.createQuery("from "+ Office.class.getName());
             List result = query.getResultList();
             session.getTransaction().commit();
             session.close();
